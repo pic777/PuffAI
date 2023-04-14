@@ -78,6 +78,7 @@ const handleSubmit = async (e) => {
   loader(messageDiv);
 
   // fetch response from the server
+  //const response = await fetch('http://localhost:5000', {
   const response = await fetch('https://puffai.onrender.com', {
     method: 'POST',
     headers: {
@@ -88,7 +89,7 @@ const handleSubmit = async (e) => {
     })
   })
 
-  //not longer loading
+  //no longer loading
   clearInterval(loadInterval);
   messageDiv.innerHTML = '';
 
